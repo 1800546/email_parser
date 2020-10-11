@@ -4,7 +4,7 @@ Parse ost or pst email datafile in working directory automatically via command l
 
 This tool uses relative path and everything is based on the working directory (path of command line). The datafile must be named either "input.ost" or "input.pst" and be placed in the working directory. The "email_parser.exe" executable should be placed inside the "libraries" sub-folder in the working directory.
 
-Multiple csv files will be generated inside the "emailtemp" sub-folder in working directory.
+Multiple csv files will be generated inside the "emailtemp" sub-folder in working directory, which must be created before running the tool.
 
 # Working directory structure
 Before running the tool
@@ -13,6 +13,7 @@ Before running the tool
     -email_parser.exe
 -emailtemp/
 -input.xst
+-README.md
 ```
 After running the tool
 ```
@@ -25,6 +26,7 @@ After running the tool
     -email_b3Z8DrSTvdqvHmE348Kw9L0aHxApdey4.csv
     -email_cEbrK3mBPuOENRNvQaN2WUz7pAGcsWjv.csv
 -input.xst
+-README.md
 ```
 The tool can be used manually with the layout above kept in mind, but it can also be automated with the code below. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" sections below.
 # Sample codes (Python2 for Windows)
