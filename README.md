@@ -121,7 +121,7 @@ https://www.cfreds.nist.gov/data_leakage_case/data-leakage-case.html
 ```
 Click on the Personal Computer (PC) – 'DD' Image.
 
-Once downloaded, use a tool like OSFMount to mount the image.
+Once downloaded, use a tool like OSFMount to mount the image in writeable mode.
 ```
 https://www.osforensics.com/tools/mount-disk-images.html
 ```
