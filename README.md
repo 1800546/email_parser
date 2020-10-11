@@ -113,7 +113,7 @@ The datafile must be copied into the working directory and renamed to "input.ost
 
 You can use your own outlook datafiles (ost or pst) which are found in the following directory:
 
-C:\Users\ **your_user_name** \AppData\Local\Microsoft\Outlook\ **your_email_address** .xst
+C:\Users\ **your_user_name** \AppData\Local\Microsoft\Outlook\ **your_email@domain.com** .xst
 
 Otherwise, a sample ost file can be downloaded for testing from:
 ```
