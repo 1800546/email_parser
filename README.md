@@ -2,7 +2,7 @@
 
 Parse ost or pst email datafile in working directory automatically via command line or manually.
 
-This tool uses relative path and everything is based on the working directory (path of command line). The datafile must be named either "input.ost" or "input.pst" and be placed in the working directory. The "email_parser.exe" executable should be placed inside the "libraries" sub-folder in the working directory.
+This tool uses relative path and everything is based on the working directory (path of command line). The datafile must be copied into the working directory and renamed to either "input.ost" or "input.pst". The "email_parser.exe" executable should be placed inside the "libraries" sub-folder in the working directory.
 
 Multiple csv files will be generated inside the "emailtemp" sub-folder in working directory, which must be created before running the tool.
 
@@ -106,4 +106,26 @@ while (getEFCount() != emailvar8):
     emailfilecount = len(emailfiles)
     print "Current fetch: "+str(emailfilecount)+ " files."
 print "CSV files successfully verified"
+```
+# Testing
+
+The datafile must be copied into the working directory and renamed to "input.ost" or "input.pst". Below are some ways you can obtain a datafile.
+
+You can use your own outlook datafiles (ost or pst) which are found in the following directory:
+
+C:\Users\ **your_user_name** \AppData\Local\Microsoft\Outlook\ **your_email_address** .xst
+
+Otherwise, a sample ost file can be downloaded for testing from:
+```
+https://www.cfreds.nist.gov/data_leakage_case/data-leakage-case.html
+```
+Click on the Personal Computer (PC) – 'DD' Image.
+
+Once downloaded, use a tool like OSFMount to mount the image.
+```
+https://www.osforensics.com/tools/mount-disk-images.html
+```
+Inside the image, there is an outlook datafile at:
+```
+X:\Users\informant\AppData\Local\Microsoft\Outlook\iaman.informant@nist.gov.ost
 ```
