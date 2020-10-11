@@ -4,9 +4,31 @@ Parse ost or pst email datafile in working directory automatically via command l
 
 This tool uses relative path and everything is based on the working directory (path of command line). The datafile must be named either "input.ost" or "input.pst" and be placed in the working directory. The "email_parser.exe" executable should be placed inside the "libraries" sub-folder in the working directory.
 
-Multiple csv files will be generated inside the "emailtemp" sub-folder in working directory, depending on the structure of the input datafile.
+Multiple csv files will be generated inside the "emailtemp" sub-folder in working directory.
 
-#Sample codes (Python2 for Windows)
+# Working directory structure
+Before running the tool
+```
+-libraries/
+    -email_parser.exe
+-emailtemp/
+-input.xst
+```
+After running the tool
+```
+-libraries/
+    -email_parser.exe
+-emailtemp/
+    -email_7iWqTD3MgLkFD0YGuNVKSxbSuG8Gfjvg.csv
+    -email_9ocujoqrpIACjhP2ThEQMSqhxClU06HG.csv
+     ...(the number of files here depends on the structure of the input datafile)...
+    -email_b3Z8DrSTvdqvHmE348Kw9L0aHxApdey4.csv
+    -email_cEbrK3mBPuOENRNvQaN2WUz7pAGcsWjv.csv
+-input.xst
+```
+The tool can be used manually with the layout above kept in mind, but it can also be automated with the code below. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" sections below.
+# Sample codes (Python2 for Windows)
+
 First, let's create the necessary sub-folder
 ```
 os.makedirs("emailtemp")
@@ -16,7 +38,7 @@ Here is how to generate the output
 if os.path.isdir("emailtemp"):
     os.system('\"'+abspath("libraries/email_parser.exe")+'\"')
 ```
-Below is how to parse the multiple csv files generated
+Below is how to read the multiple csv files generated
 ```
 regexlineslist = []
 for filename in os.listdir("emailtemp"):
@@ -30,7 +52,8 @@ The following regex can be used to match with emails addresses and timestamps in
 email = re.compile("^[0-9a-zA-Z_.-]+@[0-9a-zA-Z][0-9a-zA-Z.-]*[0-9a-zA-Z]\.[a-zA-Z]{2,64}$")
 timestamps = re.compile("^\d{1,2}[A-Z][a-z]{2}\d{5,6}:\d{2}:\d{2}(a|p)m$")
 ```
-However, before using the parsing or regex codes above, it is recommended to run the extraction multiple times to ensure that there was no silent errors the fist time. This is because the tool is not stable when automated and the results have to be verified. Fortunately, there is an easy way to verify the results as shown below. It is recommended to run it 20 times to be safe; but for time-critical situations, 10 times would probably suffice.
+# Limitations
+Before using the reading or parsing codes above, it is recommended to run the extraction multiple times to ensure that there was no silent errors the fist time. This is because the tool is not stable when automated and the results have to be verified. Fortunately, there is an easy way to verify the results as shown below. It is recommended to run it 20 times to be safe; but for time-critical situations, 10 times would probably suffice.
 ```
 emailvar6 = 0
 def askSequence2():
