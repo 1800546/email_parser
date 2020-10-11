@@ -51,8 +51,8 @@ for filename in os.listdir("emailtemp"):
 ```
 The following regex can be used to match with emails addresses and timestamps in the list populated in the code above.
 ```
-email = re.compile("^[0-9a-zA-Z_.-]+@[0-9a-zA-Z][0-9a-zA-Z.-]*[0-9a-zA-Z]\.[a-zA-Z]{2,64}$")
-timestamps = re.compile("^\d{1,2}[A-Z][a-z]{2}\d{5,6}:\d{2}:\d{2}(a|p)m$")
+email = re.compile("^[0-9a-zA-Z_.-]+@[0-9a-zA-Z][0-9a-zA-Z.-]*[0-9a-zA-Z]\\.[a-zA-Z]{2,64}$")
+timestamp = re.compile("^\\d{1,2}[A-Z][a-z]{2}\\d{5,6}:\\d{2}:\\d{2}(a|p)m$")
 ```
 # Limitations
 Before using the reading or parsing codes above, it is recommended to run the extraction multiple times to ensure that there was no silent errors the fist time. This is because the tool is not stable when automated and the results have to be verified. Fortunately, there is an easy way to verify the results as shown below. It is recommended to run it 20 times to be safe; but for time-critical situations, 10 times would probably suffice.
