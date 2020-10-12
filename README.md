@@ -2,11 +2,11 @@
 
 Parse ost or pst email datafile in working directory automatically via command line or manually.
 
-This tool uses relative path and everything is based on the working directory (path of command line). The datafile must be copied into the working directory and renamed to either "input.ost" or "input.pst". The "email_parser.exe" executable should be placed inside the "libraries" sub-folder in the working directory.
+This tool uses relative path and everything is based on the working directory (path of command line). The datafile must be copied into the working directory and renamed to either "input.ost" or "input.pst". The "email_parser.exe" executable should be placed inside the "libraries" folder in the working directory.
 
-Multiple csv files will be generated inside the "emailtemp" sub-folder in working directory, which must be created before running the tool.
+Multiple csv files will be generated inside the "emailtemp" folder in working directory, which must be created before running the tool.
 
-Since this tool is designed to recognise only this specific working directory structure, it is better to download/clone this repo entirely in order to avoid manual directory modifications. If you prefer manual modification, please refer to the "Working directory structure" section below.
+Since this tool is designed to recognise only this specific working directory structure, it is better to download/clone this repo entirely in order to avoid manual folder modifications. If you prefer manual modification, please refer to the "Working directory structure" section below.
 
 # Working directory structure
 Before running the tool
@@ -24,16 +24,18 @@ After running the tool
 -emailtemp/
     -email_7iWqTD3MgLkFD0YGuNVKSxbSuG8Gfjvg.csv
     -email_9ocujoqrpIACjhP2ThEQMSqhxClU06HG.csv
-     ...(the number of files here depends on the structure of the input datafile)...
     -email_b3Z8DrSTvdqvHmE348Kw9L0aHxApdey4.csv
     -email_cEbrK3mBPuOENRNvQaN2WUz7pAGcsWjv.csv
 ```
-The tool can be used manually with the layout above kept in mind, but it can also be automated with the code below. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" section below.
+The number of files in the "emailtemp" folder depends on the structure of the input datafile. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" section below.
+
+The tool can be used manually with the layout above kept in mind, but it can also be automated. Some sample codes are provided in the "Sample codes" section.
+
 # Sample codes (Python2)
 
 Before we start, please refer to "Annex A" section below and ensure your windows time/date display configuration in metro mode (Settings app) and desktop mode (Control panel) are exactly the same as the image in Annex A. This sample code is optimised for this particular display configuration. Other display configurations will cause this sample code to not function, since the regex may not be able to adapt to locale-specific changes. If you are using other display configurations, you may have to create your own regex.
 
-First, let's create the necessary sub-folder
+First, let's create the necessary folder
 ```
 os.makedirs("emailtemp")
 ```
@@ -113,7 +115,7 @@ print "CSV files successfully verified"
 
 The datafile must be copied into the working directory and renamed to "input.ost" or "input.pst". Below are some ways you can obtain a datafile.
 
-You can use your own outlook datafiles (ost or pst) which are found in the following directory:
+You can use your own outlook datafiles (ost or pst) which are found in the following folder:
 
 C:\Users\ **your_user_name** \AppData\Local\Microsoft\Outlook\ **your_email@domain.com** .xst
 
