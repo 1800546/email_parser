@@ -13,20 +13,20 @@ Before running the tool
 ```
 -libraries/
     -email_parser.exe
--emailtemp/
 -input.xst
+-emailtemp/
 ```
 After running the tool
 ```
 -libraries/
     -email_parser.exe
+-input.xst
 -emailtemp/
     -email_7iWqTD3MgLkFD0YGuNVKSxbSuG8Gfjvg.csv
     -email_9ocujoqrpIACjhP2ThEQMSqhxClU06HG.csv
      ...(the number of files here depends on the structure of the input datafile)...
     -email_b3Z8DrSTvdqvHmE348Kw9L0aHxApdey4.csv
     -email_cEbrK3mBPuOENRNvQaN2WUz7pAGcsWjv.csv
--input.xst
 ```
 The tool can be used manually with the layout above kept in mind, but it can also be automated with the code below. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" section below.
 # Sample codes (Python2)
