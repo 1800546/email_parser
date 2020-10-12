@@ -13,7 +13,6 @@ Before running the tool
     -email_parser.exe
 -emailtemp/
 -input.xst
--README.md
 ```
 After running the tool
 ```
@@ -26,7 +25,6 @@ After running the tool
     -email_b3Z8DrSTvdqvHmE348Kw9L0aHxApdey4.csv
     -email_cEbrK3mBPuOENRNvQaN2WUz7pAGcsWjv.csv
 -input.xst
--README.md
 ```
 The tool can be used manually with the layout above kept in mind, but it can also be automated with the code below. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" section below.
 # Sample codes (Python2)
