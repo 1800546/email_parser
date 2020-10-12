@@ -28,8 +28,10 @@ After running the tool
 -input.xst
 -README.md
 ```
-The tool can be used manually with the layout above kept in mind, but it can also be automated with the code below. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" sections below.
+The tool can be used manually with the layout above kept in mind, but it can also be automated with the code below. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" section below.
 # Sample codes (Python2 for Windows)
+
+Before we start, please refer to "Annex A" section below and ensure your windows time/date display configuration in metro mode (Settings app) and desktop mode (Control panel) are exactly the same as the image in Annex A. This sample code is optimised for this particular display configuration. Other display configurations will cause this sample code to not function, since the regex may not be able to adapt to locale-specific changes. If you are using other display configurations, you may have to create your own regex.
 
 First, let's create the necessary sub-folder
 ```
@@ -129,3 +131,9 @@ Inside the image, there is an outlook datafile at:
 ```
 X:\Users\informant\AppData\Local\Microsoft\Outlook\iaman.informant@nist.gov.ost
 ```
+
+# Annex A
+This annex is for reference from the "Sample codes" section.
+![Display Configuration](https://github.com/1800546/email_parser/raw/main/displayconfig.jpg)
+
+
