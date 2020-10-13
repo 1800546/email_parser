@@ -6,7 +6,7 @@ This tool uses relative path and everything is based on the working directory (p
 
 Multiple csv files will be generated inside the "emailtemp" folder in working directory, which must be created before running the tool.
 
-Since this tool is designed to recognise only this specific working directory structure, it is better to download/clone this repo entirely in order to avoid manual folder modifications. If you prefer manual modification, please refer to the "Working directory structure" section below.
+Since this tool and the sample codes provided are designed to recognise only this specific working directory structure, it is recommended to download/clone this repo entirely in order to avoid manual folder modifications. If you prefer manual modification, please refer to the "Working directory structure" section below.
 
 # Working directory structure
 Before running the tool
