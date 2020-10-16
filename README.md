@@ -27,13 +27,13 @@ After running the tool
     -email_b3Z8DrSTvdqvHmE348Kw9L0aHxApdey4.csv
     -email_cEbrK3mBPuOENRNvQaN2WUz7pAGcsWjv.csv
 ```
-The number of files in the "emailtemp" folder depends on the structure of the input datafile. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" section below.
+The number of files in the "emailtemp" folder depends on the structure of the input datafile. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" section.
 
-The tool can be used manually by direct execution with the layout above kept in mind, but it can also be automated. Some sample automation codes are provided in the "Sample codes" section.
+The tool can be used manually by direct execution with the layout above kept in mind, but it can also be automated. Some sample automation codes are provided in the "Sample automation codes" section below.
 
 # Sample automation codes (Python2)
 
-Before we start, please refer to "Annex A" section below and ensure your windows time/date display configuration in metro mode (Settings app) and desktop mode (Control panel) are exactly the same as the image in Annex A. This sample code is optimised for this particular display configuration. Other display configurations will cause this sample code to not function, since the regex may not be able to adapt to locale-specific changes. If you are using other display configurations, you may have to create your own regex.
+Before we start, please refer to "Annex A" section and ensure your windows time/date display configuration in metro mode (Settings app) and desktop mode (Control panel) are exactly the same as the image in Annex A. This sample code is optimised for this particular display configuration. Other display configurations will cause this sample code to not function, since the regex may not be able to adapt to locale-specific changes. If you are using other display configurations, you may have to create your own regex.
 
 First, let's create the necessary folder
 ```
