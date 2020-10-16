@@ -29,9 +29,9 @@ After running the tool
 ```
 The number of files in the "emailtemp" folder depends on the structure of the input datafile. Be sure to run the tool multiple times to ensure accuracy, as mentioned in the "Limitations" section below.
 
-The tool can be used manually with the layout above kept in mind, but it can also be automated. Some sample codes are provided in the "Sample codes" section.
+The tool can be used manually by direct execution with the layout above kept in mind, but it can also be automated. Some sample automation codes are provided in the "Sample codes" section.
 
-# Sample codes (Python2)
+# Sample automation codes (Python2)
 
 Before we start, please refer to "Annex A" section below and ensure your windows time/date display configuration in metro mode (Settings app) and desktop mode (Control panel) are exactly the same as the image in Annex A. This sample code is optimised for this particular display configuration. Other display configurations will cause this sample code to not function, since the regex may not be able to adapt to locale-specific changes. If you are using other display configurations, you may have to create your own regex.
 
