@@ -59,7 +59,7 @@ email = re.compile("^[0-9a-zA-Z_.-]+@[0-9a-zA-Z][0-9a-zA-Z.-]*[0-9a-zA-Z]\\.[a-z
 timestamp = re.compile("^\\d{1,2}[A-Z][a-z]{2}\\d{5,6}:\\d{2}:\\d{2}(a|p)m$")
 ```
 # Limitations
-Before using the reading or parsing codes above, it is recommended to run the extraction multiple times to ensure that there was no silent errors the fist time. This is because the tool is not stable when automated and the results have to be verified. Fortunately, there is an easy way to verify the results as shown below. It is recommended to run it 20 times to be safe; but for time-critical situations, 10 times would probably suffice.
+Before using the reading or parsing codes above, it is recommended to run the extraction multiple times to ensure that there was no silent errors the first time. This is because the tool is not stable when automated and the results have to be verified. Fortunately, there is an easy way to verify the results as shown below. It is recommended to run it 20 times to be safe; but for time-critical situations, 10 times would probably suffice.
 ```
 emailvar6 = 0
 def askSequence2():
